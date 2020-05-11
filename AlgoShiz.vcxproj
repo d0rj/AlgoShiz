@@ -139,10 +139,10 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp" />
-    <ClCompile Include="Sorts\BubbleSort.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Sorts\BubbleSort.hpp" />
+    <ClInclude Include="Sorts\SelectionSort.hpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
