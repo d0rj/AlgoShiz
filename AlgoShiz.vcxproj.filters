@@ -16,6 +16,9 @@
     <Filter Include="Файлы заголовков\Sorts">
       <UniqueIdentifier>{3adf5d9a-461f-4c69-8b32-0483d1571a77}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Файлы заголовков\Arrays">
+      <UniqueIdentifier>{8342c738-d268-4fc3-9e2c-acda8c9a9b03}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -27,6 +30,12 @@
       <Filter>Файлы заголовков\Sorts</Filter>
     </ClInclude>
     <ClInclude Include="Sorts\SelectionSort.hpp">
+      <Filter>Файлы заголовков\Sorts</Filter>
+    </ClInclude>
+    <ClInclude Include="Arrays\Utils.hpp">
+      <Filter>Файлы заголовков\Arrays</Filter>
+    </ClInclude>
+    <ClInclude Include="Sorts\BeadSort.hpp">
       <Filter>Файлы заголовков\Sorts</Filter>
     </ClInclude>
   </ItemGroup>

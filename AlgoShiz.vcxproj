@@ -141,6 +141,8 @@
     <ClCompile Include="main.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Arrays\Utils.hpp" />
+    <ClInclude Include="Sorts\BeadSort.hpp" />
     <ClInclude Include="Sorts\BubbleSort.hpp" />
     <ClInclude Include="Sorts\SelectionSort.hpp" />
   </ItemGroup>
