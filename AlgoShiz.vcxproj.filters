@@ -41,5 +41,8 @@
     <ClInclude Include="Sorts\InsertionSort.hpp">
       <Filter>Файлы заголовков\Sorts</Filter>
     </ClInclude>
+    <ClInclude Include="Sorts\MergeSort.hpp">
+      <Filter>Файлы заголовков\Sorts</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

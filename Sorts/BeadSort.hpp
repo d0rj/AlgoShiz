@@ -8,7 +8,7 @@
 
 namespace AlgoShiz
 {
-    void distribute(int dist, std::vector<int>& arr)
+    void distribute(size_t dist, std::vector<int>& arr)
     {
         if (dist > arr.size())
             arr.resize(dist);
@@ -24,10 +24,10 @@ namespace AlgoShiz
     {
         std::vector<int> list, list2, fifth(*arr);
 
-        for (int i = 0; i < fifth.size(); ++i)
+        for (size_t i = 0; i < fifth.size(); ++i)
             distribute(fifth[i], list);
 
-        for (int i = 0; i < list.size(); ++i)
+        for (size_t i = 0; i < list.size(); ++i)
             distribute(list[i], list2);
 #ifdef ALWAYS_LOW2HIGH
         Flip(&list2);
@@ -42,10 +42,10 @@ namespace AlgoShiz
     {
         std::vector<int> list, list2, fifth(myints, myints + n);
 
-        for (int i = 0; i < fifth.size(); ++i)
+        for (size_t i = 0; i < fifth.size(); ++i)
             distribute(fifth[i], list);
 
-        for (int i = 0; i < list.size(); ++i)
+        for (size_t i = 0; i < list.size(); ++i)
             distribute(list[i], list2);
 #ifdef ALWAYS_LOW2HIGH
         Flip(&list2);
