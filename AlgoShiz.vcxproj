@@ -147,6 +147,7 @@
     <ClInclude Include="Sorts\InsertionSort.hpp" />
     <ClInclude Include="Sorts\MergeSort.hpp" />
     <ClInclude Include="Sorts\SelectionSort.hpp" />
+    <ClInclude Include="Sorts\ShakerSort.hpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
