@@ -47,5 +47,8 @@
     <ClInclude Include="Sorts\ShakerSort.hpp">
       <Filter>Файлы заголовков\Sorts</Filter>
     </ClInclude>
+    <ClInclude Include="Sorts\QuickSort.hpp">
+      <Filter>Файлы заголовков\Sorts</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

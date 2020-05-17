@@ -146,6 +146,7 @@
     <ClInclude Include="Sorts\BubbleSort.hpp" />
     <ClInclude Include="Sorts\InsertionSort.hpp" />
     <ClInclude Include="Sorts\MergeSort.hpp" />
+    <ClInclude Include="Sorts\QuickSort.hpp" />
     <ClInclude Include="Sorts\SelectionSort.hpp" />
     <ClInclude Include="Sorts\ShakerSort.hpp" />
   </ItemGroup>
