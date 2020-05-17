@@ -5,6 +5,7 @@
 
 namespace AlgoShiz
 {
+    /// <summary> O(n*log(n)) </summary>
     template<class T>
     void QuickSort(T* arr, long n)
     {

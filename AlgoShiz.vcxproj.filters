@@ -19,6 +19,9 @@
     <Filter Include="Файлы заголовков\Arrays">
       <UniqueIdentifier>{8342c738-d268-4fc3-9e2c-acda8c9a9b03}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Файлы заголовков\Math">
+      <UniqueIdentifier>{214751a4-69ff-465a-97e9-da889351a041}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -49,6 +52,9 @@
     </ClInclude>
     <ClInclude Include="Sorts\QuickSort.hpp">
       <Filter>Файлы заголовков\Sorts</Filter>
+    </ClInclude>
+    <ClInclude Include="Math\Power.hpp">
+      <Filter>Файлы заголовков\Math</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
