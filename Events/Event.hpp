@@ -5,37 +5,40 @@
 #include <functional>
 
 
-template <typename Ret, typename ...Args>
-using delegate = std::function<Ret(Args...)>;
-
-
-template <typename Ret, typename ...Args>
-class Event
+namespace AlgoShiz 
 {
-private:
-	using fn_t = delegate<Ret, Args...>;
-	std::vector<fn_t> observers;
-public:
-	void AddHandler(fn_t f)
-	{
-		observers.push_back(f);
-	}
+	template <typename Ret, typename ...Args>
+	using delegate = std::function<Ret(Args...)>;
 
-	void RemoveHandler(fn_t f)
-	{
-		auto place = std::find(observers.begin(), observers.end(), f);
-		if (place != observers.end())
-			observers.erase(observers.begin() + place);
-	}
 
-	void operator ()(Args... a)
+	template <typename Ret, typename ...Args>
+	class Event
 	{
-		Invoke(a...);
-	}
+	private:
+		using fn_t = delegate<Ret, Args...>;
+		std::vector<fn_t> observers;
+	public:
+		void AddHandler(fn_t f)
+		{
+			observers.push_back(f);
+		}
 
-	void Invoke(Args... a)
-	{
-		for (auto observer : observers)
-			observer(a...);
-	}
-};
+		void RemoveHandler(fn_t f)
+		{
+			auto place = std::find(observers.begin(), observers.end(), f);
+			if (place != observers.end())
+				observers.erase(observers.begin() + place);
+		}
+
+		void operator ()(Args... a)
+		{
+			Invoke(a...);
+		}
+
+		void Invoke(Args... a)
+		{
+			for (auto observer : observers)
+				observer(a...);
+		}
+	};
+}
