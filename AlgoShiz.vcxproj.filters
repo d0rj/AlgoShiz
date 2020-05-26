@@ -25,6 +25,9 @@
     <Filter Include="Файлы заголовков\Events">
       <UniqueIdentifier>{6910551e-9f5a-4797-bf3f-22b5a82c2aa1}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Файлы заголовков\Structures">
+      <UniqueIdentifier>{d40877cf-70e0-4640-8c7e-4597d72eeff6}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -67,6 +70,9 @@
     </ClInclude>
     <ClInclude Include="Events\Event.hpp">
       <Filter>Файлы заголовков\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="Structures\Vector.hpp">
+      <Filter>Файлы заголовков\Structures</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
