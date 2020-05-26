@@ -22,6 +22,9 @@
     <Filter Include="Файлы заголовков\Math">
       <UniqueIdentifier>{214751a4-69ff-465a-97e9-da889351a041}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Файлы заголовков\Events">
+      <UniqueIdentifier>{6910551e-9f5a-4797-bf3f-22b5a82c2aa1}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -61,6 +64,9 @@
     </ClInclude>
     <ClInclude Include="Math\Sqrt.hpp">
       <Filter>Файлы заголовков\Math</Filter>
+    </ClInclude>
+    <ClInclude Include="Events\Event.hpp">
+      <Filter>Файлы заголовков\Events</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
