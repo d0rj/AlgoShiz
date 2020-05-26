@@ -1,6 +1,7 @@
 #pragma once
 
 #include <algorithm>
+#include <stdexcept>
 
 
 namespace AlgoShiz 
@@ -22,33 +23,53 @@ namespace AlgoShiz
 
 		size_t Length() { return count; }
 
+		T& At(size_t i)
+		{
+			if (i < count && i >= 0)
+				return arr[i];
+			else // Index is 300$
+				throw std::out_of_range("Index is out of range.");
+		}
+
+		void Reserve(size_t newCapacity)
+		{
+			T* newArr = new T[newCapacity];
+			std::copy(arr, arr + std::min(count, newCapacity), newArr);
+
+			delete[] arr;
+			arr = newArr;
+			capacity = newCapacity;
+		}
+
 		void PushBack(T element)
 		{
 			if (capacity <= count)
-			{
-				T* newArr = new T[capacity << 1];
-				std::copy(arr, arr + count, newArr);
-
-				delete[] arr;
-				arr = newArr;
-				capacity <<= 1;
-			}
+				Reserve(capacity << 1);
 
 			arr[count++] = element;
 		}
 
+		T PopBack()
+		{
+			T result = At(count - 1);
+			--count;
+			return result;
+		}
+
 		T& operator [](size_t i)
 		{
-			if (i < count)
-				return arr[i];
-			else
-				throw 1;
+			return At(i);
 		}
 
 		Vector<T>& operator +(T element)
 		{
 			PushBack(element);
 			return *this;
+		}
+
+		void operator +=(T element)
+		{
+			PushBack(element);
 		}
 	};
 }
