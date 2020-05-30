@@ -77,5 +77,8 @@
     <ClInclude Include="Sorts\HeapSort.hpp">
       <Filter>Файлы заголовков\Sorts</Filter>
     </ClInclude>
+    <ClInclude Include="Sorts\BucketSort.hpp">
+      <Filter>Файлы заголовков\Sorts</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
