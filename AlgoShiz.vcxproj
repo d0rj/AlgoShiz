@@ -154,6 +154,7 @@
     <ClInclude Include="Sorts\InsertionSort.hpp" />
     <ClInclude Include="Sorts\MergeSort.hpp" />
     <ClInclude Include="Sorts\QuickSort.hpp" />
+    <ClInclude Include="Sorts\RadixSort.hpp" />
     <ClInclude Include="Sorts\SelectionSort.hpp" />
     <ClInclude Include="Sorts\ShakerSort.hpp" />
     <ClInclude Include="Structures\Vector.hpp" />
