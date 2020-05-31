@@ -89,5 +89,8 @@
     <ClInclude Include="Sorts\CombSort.hpp">
       <Filter>Файлы заголовков\Sorts</Filter>
     </ClInclude>
+    <ClInclude Include="Structures\LinkedList.hpp">
+      <Filter>Файлы заголовков\Structures</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

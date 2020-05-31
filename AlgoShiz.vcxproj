@@ -158,6 +158,7 @@
     <ClInclude Include="Sorts\RadixSort.hpp" />
     <ClInclude Include="Sorts\SelectionSort.hpp" />
     <ClInclude Include="Sorts\ShakerSort.hpp" />
+    <ClInclude Include="Structures\LinkedList.hpp" />
     <ClInclude Include="Structures\Vector.hpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
