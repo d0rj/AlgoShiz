@@ -61,4 +61,21 @@ namespace AlgoShiz
 
 		return result;
 	}
+
+
+	double IntegralRectangle(std::function<double(double)> f, double a, double b, size_t factorization = 0)
+	{
+		if (factorization == 0)
+			factorization = DefaultPanelCount;
+
+		double step = (b - a) / factorization;
+
+		double result = 0;
+		for (double i = a; i < b; i += step)
+			result += f((2 * i + step) / 2.0f);
+
+		result *= step;
+
+		return result;
+	}
 }
