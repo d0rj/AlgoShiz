@@ -92,5 +92,8 @@
     <ClInclude Include="Structures\LinkedList.hpp">
       <Filter>Файлы заголовков\Structures</Filter>
     </ClInclude>
+    <ClInclude Include="Math\Integration.hpp">
+      <Filter>Файлы заголовков\Math</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

@@ -144,6 +144,7 @@
     <ClInclude Include="Arrays\Utils.hpp" />
     <ClInclude Include="Events\Event.hpp" />
     <ClInclude Include="Math\Factorial.hpp" />
+    <ClInclude Include="Math\Integration.hpp" />
     <ClInclude Include="Math\Power.hpp" />
     <ClInclude Include="Math\Sqrt.hpp" />
     <ClInclude Include="Sorts\BeadSort.hpp" />
