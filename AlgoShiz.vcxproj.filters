@@ -107,5 +107,8 @@
     <ClInclude Include="Search\LinearSearch.hpp">
       <Filter>Файлы заголовков\Search</Filter>
     </ClInclude>
+    <ClInclude Include="Search\BinarySearch.hpp">
+      <Filter>Файлы заголовков\Search</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

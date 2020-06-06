@@ -149,6 +149,7 @@
     <ClInclude Include="Math\Integration.hpp" />
     <ClInclude Include="Math\Power.hpp" />
     <ClInclude Include="Math\Sqrt.hpp" />
+    <ClInclude Include="Search\BinarySearch.hpp" />
     <ClInclude Include="Search\LinearSearch.hpp" />
     <ClInclude Include="Sorts\BeadSort.hpp" />
     <ClInclude Include="Sorts\BubbleSort.hpp" />
