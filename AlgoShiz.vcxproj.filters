@@ -28,6 +28,9 @@
     <Filter Include="Файлы заголовков\Structures">
       <UniqueIdentifier>{d40877cf-70e0-4640-8c7e-4597d72eeff6}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Файлы заголовков\Search">
+      <UniqueIdentifier>{6cd58202-6268-4f10-92b9-f5cad83923bb}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -101,8 +104,8 @@
     <ClInclude Include="Math\Fibonacci.hpp">
       <Filter>Файлы заголовков\Math</Filter>
     </ClInclude>
-    <ClInclude Include="Arrays\LinearSearch.hpp">
-      <Filter>Файлы заголовков\Arrays</Filter>
+    <ClInclude Include="Search\LinearSearch.hpp">
+      <Filter>Файлы заголовков\Search</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
