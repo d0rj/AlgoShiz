@@ -101,5 +101,8 @@
     <ClInclude Include="Math\Fibonacci.hpp">
       <Filter>Файлы заголовков\Math</Filter>
     </ClInclude>
+    <ClInclude Include="Arrays\LinearSearch.hpp">
+      <Filter>Файлы заголовков\Arrays</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

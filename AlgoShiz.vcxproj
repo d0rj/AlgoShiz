@@ -141,6 +141,7 @@
     <ClCompile Include="main.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Arrays\LinearSearch.hpp" />
     <ClInclude Include="Arrays\Utils.hpp" />
     <ClInclude Include="Events\Event.hpp" />
     <ClInclude Include="Math\Factorial.hpp" />
