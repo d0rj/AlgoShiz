@@ -5,13 +5,14 @@ namespace AlgoShiz
 {
 	long long int GCD(long long unsigned a, long long unsigned b)
 	{
-		if (a == 0)
-			return b;
-		else if (b == 0)
-			return a;
-		else if (a >= b)
-			return GCD(a % b, b);
-		else 
-			return GCD(a, b % a);
+		while (a > 0 && b > 0)
+		{
+			if (a >= b)
+				a %= b;
+			else 
+				b %= a;
+		}
+
+		return a == 0 ? b : a;
 	}
 }
