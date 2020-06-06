@@ -31,7 +31,7 @@ namespace AlgoShiz
 		{
 			for (size_t i = 0; i < n; ++i)
 			{
-				int t = std::pow(10, j);
+				int t = (int)std::pow(10, j);
 				++count[(a[i] % (10 * t)) / t];
 			}
 
@@ -40,7 +40,7 @@ namespace AlgoShiz
 			{
 				for (int i = 0; i < n; ++i)
 				{
-					int t = std::pow(10, j);
+					int t = (int)std::pow(10, j);
 
 					if ((a[i] % (10 * t)) / t == p)
 						output[k++] = a[i];
