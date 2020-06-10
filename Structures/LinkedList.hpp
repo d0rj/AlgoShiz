@@ -16,6 +16,13 @@ namespace AlgoShiz
         NPNode<T>(T value, NPNode<T>* prev = nullptr, NPNode<T>* next = nullptr)
             : value(value), prev(prev), next(next) {}
 
+        NPNode<T>* InsertPrev(T newValue)
+        {
+            NPNode<T>* temp = prev;
+            prev = new NPNode<T>(newValue, temp, this);
+            return prev;
+        }
+
         NPNode<T>* InsertNext(T newValue)
         {
             NPNode<T>* temp = next;
