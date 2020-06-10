@@ -23,11 +23,33 @@ namespace AlgoShiz
             return prev;
         }
 
+        NPNode<T>* InsertPrev(const NPNode<T>* newNode)
+        {
+            newNode->next = this;
+            newNode->prev = this->prev;
+
+            this->prev->next = newNode;
+            this->prev = newNode;
+
+            return newNode;
+        }
+
         NPNode<T>* InsertNext(T newValue)
         {
             NPNode<T>* temp = next;
             next = new NPNode<T>(newValue, this, temp);
             return next;
+        }
+
+        NPNode<T>* InsertNext(const NPNode<T>* newNode)
+        {
+            newNode->prev = this;
+            newNode->next = this->next;
+
+            this->next->prev = newNode;
+            this->next = newNode;
+
+            return newNode;
         }
 
         NPNode<T>* InsertBack(T newValue)
