@@ -110,5 +110,8 @@
     <ClInclude Include="Search\BinarySearch.hpp">
       <Filter>Файлы заголовков\Search</Filter>
     </ClInclude>
+    <ClInclude Include="Math\Differentiation.hpp">
+      <Filter>Файлы заголовков\Math</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
