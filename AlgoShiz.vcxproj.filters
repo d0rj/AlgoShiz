@@ -113,5 +113,8 @@
     <ClInclude Include="Math\Differentiation.hpp">
       <Filter>Файлы заголовков\Math</Filter>
     </ClInclude>
+    <ClInclude Include="Math\Interpolation.hpp">
+      <Filter>Файлы заголовков\Math</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
