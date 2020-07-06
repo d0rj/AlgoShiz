@@ -120,4 +120,12 @@
       <Filter>Файлы заголовков\Math</Filter>
     </ClInclude>
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Math\README.md">
+      <Filter>Файлы заголовков\Math</Filter>
+    </None>
+    <None Include="README.md">
+      <Filter>Исходные файлы</Filter>
+    </None>
+  </ItemGroup>
 </Project>
