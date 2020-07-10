@@ -46,4 +46,27 @@ namespace AlgoShiz
 
 		return true;
 	}
+
+
+	std::vector<int> GetDividers(int n)
+	{
+		std::vector<int> result;
+
+		if (n < 0)
+		{
+			result.push_back(-1);
+			n *= -1;
+		}
+
+		for (int probe = 2; probe <= sqrt(n); ++probe)
+			if (n % probe == 0)
+			{
+				result.push_back(probe);
+
+				if (probe != n / probe)
+					result.push_back(n / probe);
+			}
+
+		return result;
+	}
 }
