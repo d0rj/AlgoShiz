@@ -146,11 +146,13 @@
     <ClInclude Include="Math\DCT.hpp" />
     <ClInclude Include="Math\Differentiation.hpp" />
     <ClInclude Include="Math\Factorial.hpp" />
+    <ClInclude Include="Math\Factorization.hpp" />
     <ClInclude Include="Math\Fibonacci.hpp" />
     <ClInclude Include="Math\GCD.hpp" />
     <ClInclude Include="Math\Integration.hpp" />
     <ClInclude Include="Math\Interpolation.hpp" />
     <ClInclude Include="Math\Power.hpp" />
+    <ClInclude Include="Math\SLAE.hpp" />
     <ClInclude Include="Math\Sqrt.hpp" />
     <ClInclude Include="Search\BinarySearch.hpp" />
     <ClInclude Include="Search\LinearSearch.hpp" />

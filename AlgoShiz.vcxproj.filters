@@ -119,6 +119,12 @@
     <ClInclude Include="Math\DCT.hpp">
       <Filter>Файлы заголовков\Math</Filter>
     </ClInclude>
+    <ClInclude Include="Math\SLAE.hpp">
+      <Filter>Файлы заголовков\Math</Filter>
+    </ClInclude>
+    <ClInclude Include="Math\Factorization.hpp">
+      <Filter>Файлы заголовков\Math</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="Math\README.md">
