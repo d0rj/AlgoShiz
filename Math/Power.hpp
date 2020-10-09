@@ -23,4 +23,22 @@ namespace AlgoShiz
 
 		return result;
 	}
+
+
+	/// <summary> Returns (x^y) % n, but fast </summary>
+	/// <param name="x"> x </param>
+	/// <param name="y"> exponent </param>
+	/// <param name="n"> mod </param>
+	long int ModeExp(int x, int y, int n)
+	{
+		if (!y)
+			return 1;
+		
+		int z = ModeExp(x, y >> 1, n);
+
+		if (y % 2 == 0)
+			return (z * z) % n;
+		else
+			return (x * z * z) % n;
+	}
 }
