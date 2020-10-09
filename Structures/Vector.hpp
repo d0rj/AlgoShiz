@@ -13,6 +13,7 @@ namespace AlgoShiz
 		T* arr;
 		size_t capacity;
 		size_t count;
+
 	public:
 		Vector() : arr(new T[1]), capacity(1), count(0) {}
 		Vector(size_t count, T placeholder = 0) : arr(new T[count]), capacity(count), count(count)
@@ -21,7 +22,9 @@ namespace AlgoShiz
 				arr[i] = placeholder;
 		}
 
+
 		size_t Length() { return count; }
+
 
 		T& At(size_t i)
 		{
@@ -30,6 +33,7 @@ namespace AlgoShiz
 			else // Index is 300$
 				throw std::out_of_range("Index is out of range.");
 		}
+
 
 		void Reserve(size_t newCapacity)
 		{
@@ -41,6 +45,7 @@ namespace AlgoShiz
 			capacity = newCapacity;
 		}
 
+
 		void PushBack(T element)
 		{
 			if (capacity <= count)
@@ -49,6 +54,7 @@ namespace AlgoShiz
 			arr[count++] = element;
 		}
 
+
 		T PopBack()
 		{
 			T result = At(count - 1);
@@ -56,16 +62,46 @@ namespace AlgoShiz
 			return result;
 		}
 
+
+		// O(n)
+		void PushForward(T element)
+		{
+			if (capacity <= count)
+				Reserve(capacity << 1);
+
+			for (int i = count; i >= 1; ++i)
+				arr[i] = arr[i - 1];
+
+			arr[0] = element;
+			++count;
+		}
+
+		
+		// O(n)
+		T PopForward()
+		{
+			T result = At(0);
+
+			for (int i = 0; i < count - 1; ++i)
+				arr[i] = arr[i + 1];
+
+			--count;
+			return result;
+		}
+
+
 		T& operator [](size_t i)
 		{
 			return At(i);
 		}
+
 
 		Vector<T>& operator +(T element)
 		{
 			PushBack(element);
 			return *this;
 		}
+
 
 		void operator +=(T element)
 		{
