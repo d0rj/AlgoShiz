@@ -49,4 +49,53 @@ namespace AlgoShiz
 
 		return lagrangePolinom;
 	}
+
+
+	// TODO: test and fix
+	double NewtonInterpolate(double x0, double* x, double* y, size_t n)
+	{
+		double newtonPolinom = y[0];
+		double h = x[1] - x[0];
+		int factor = 1;
+		
+		// create finite differenses
+		double** dy = new double* [n];
+		for (int i = 0; i < n; i++) 
+			dy[i] = new double[n];
+		// fill first 
+		for (int i = 0; i < n; i++)
+			dy[0][i] = y[i];
+		// calculate finite differenses table
+		for (int i = 1; i < n; i++)
+			for (int j = 0; j < n - i; j++)
+				dy[i][j] = dy[i - 1][j + 1] - dy[i - 1][j];
+
+
+		for (int i = 1; i < n; i++)
+		{
+			for (int j = 0; j < n - i; j++)
+			{
+				dy[i][j] = dy[i - 1][j + 1] - dy[i - 1][j];
+			}
+		}
+
+		for (size_t i = 0; i < n - 1; ++i)
+		{
+			for (size_t j = 0; j < i + 1; ++j)
+			{
+				newtonPolinom *= x0 - x[j];
+			}
+
+			newtonPolinom *= dy[0][i];
+			newtonPolinom /= factor * pow(h, i);
+
+			factor *= factor + 1;
+		}
+
+		for (int i = 0; i < n; i++) 
+			delete[] dy[i];
+		delete[] dy;
+
+		return newtonPolinom;
+	}
 }
