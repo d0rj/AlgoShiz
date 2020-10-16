@@ -44,4 +44,14 @@ namespace AlgoShiz
 
 		return result;
 	}
+
+
+	template <typename T>
+	bool ElementIn(const T elem, const std::vector<T> arr)
+	{
+		for (size_t i = 0; i < arr.size(); ++i)
+			if (arr.at(i) == elem)
+				return true;
+		return false;
+	}
 }

@@ -125,7 +125,10 @@
     <ClInclude Include="Math\Factorization.hpp">
       <Filter>Файлы заголовков\Math</Filter>
     </ClInclude>
-    <ClInclude Include="Average.hpp">
+    <ClInclude Include="Math\Similarity.hpp">
+      <Filter>Файлы заголовков\Math</Filter>
+    </ClInclude>
+    <ClInclude Include="Math\Average.hpp">
       <Filter>Файлы заголовков\Math</Filter>
     </ClInclude>
   </ItemGroup>

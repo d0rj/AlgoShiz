@@ -142,8 +142,8 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Arrays\Utils.hpp" />
-    <ClInclude Include="Average.hpp" />
     <ClInclude Include="Events\Event.hpp" />
+    <ClInclude Include="Math\Average.hpp" />
     <ClInclude Include="Math\DCT.hpp" />
     <ClInclude Include="Math\Differentiation.hpp" />
     <ClInclude Include="Math\Factorial.hpp" />
@@ -153,6 +153,7 @@
     <ClInclude Include="Math\Integration.hpp" />
     <ClInclude Include="Math\Interpolation.hpp" />
     <ClInclude Include="Math\Power.hpp" />
+    <ClInclude Include="Math\Similarity.hpp" />
     <ClInclude Include="Math\SLAE.hpp" />
     <ClInclude Include="Math\Sqrt.hpp" />
     <ClInclude Include="Search\BinarySearch.hpp" />
