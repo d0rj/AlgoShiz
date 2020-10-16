@@ -142,6 +142,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Arrays\Utils.hpp" />
+    <ClInclude Include="Average.hpp" />
     <ClInclude Include="Events\Event.hpp" />
     <ClInclude Include="Math\DCT.hpp" />
     <ClInclude Include="Math\Differentiation.hpp" />
