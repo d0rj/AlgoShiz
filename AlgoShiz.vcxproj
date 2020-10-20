@@ -141,6 +141,7 @@
     <ClCompile Include="main.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Arrays\Generator.hpp" />
     <ClInclude Include="Arrays\Utils.hpp" />
     <ClInclude Include="Events\Event.hpp" />
     <ClInclude Include="Math\Average.hpp" />
