@@ -131,6 +131,9 @@
     <ClInclude Include="Math\Average.hpp">
       <Filter>Файлы заголовков\Math</Filter>
     </ClInclude>
+    <ClInclude Include="Math\LCM.hpp">
+      <Filter>Файлы заголовков\Math</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="Math\README.md">

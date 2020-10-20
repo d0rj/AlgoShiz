@@ -152,6 +152,7 @@
     <ClInclude Include="Math\GCD.hpp" />
     <ClInclude Include="Math\Integration.hpp" />
     <ClInclude Include="Math\Interpolation.hpp" />
+    <ClInclude Include="Math\LCM.hpp" />
     <ClInclude Include="Math\Power.hpp" />
     <ClInclude Include="Math\Similarity.hpp" />
     <ClInclude Include="Math\SLAE.hpp" />
