@@ -1,6 +1,7 @@
 #pragma once
 
 #include <functional>
+#include <vector>
 
 
 namespace AlgoShiz
@@ -35,5 +36,29 @@ namespace AlgoShiz
 	T* ArrayWhere(std::function<T(int)> f, size_t n)
 	{
 		return ArrayWhere(f, 0, n);
+	}
+
+
+	template <typename T>
+	std::vector<T> VectorWhere(std::function<T(int)> f, int a, int b)
+	{
+		if (a >= b)
+			return std::vector<T>();
+
+		size_t n = std::abs(b - a);
+		std::vector<T> result;
+		for (size_t i = 0; i < n; ++i)
+		{
+			result.push_back(f(a + i));
+		}
+
+		return result;
+	}
+
+
+	template <typename T>
+	std::vector<T> VectorWhere(std::function<T(int)> f, size_t n)
+	{
+		return VectorWhere(f, 0, n);
 	}
 }
