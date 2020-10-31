@@ -137,6 +137,9 @@
     <ClInclude Include="Arrays\Generator.hpp">
       <Filter>Файлы заголовков\Arrays</Filter>
     </ClInclude>
+    <ClInclude Include="Math\Gamma.hpp">
+      <Filter>Файлы заголовков\Math</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="Math\README.md">
