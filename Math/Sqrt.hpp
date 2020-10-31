@@ -30,7 +30,7 @@ namespace AlgoShiz
 
 
     /// <summary> n-th root of a </summary>
-    /// <param name="a"> Value eto root </param>
+    /// <param name="a"> Value to root </param>
     /// <param name="n"> Root degree </param>
     long double Root(long double a, int n)
     {
