@@ -402,3 +402,5 @@ FodyWeavers.xsd
 # --- Idea
 
 .idea
+
+cmake-build-debug/
