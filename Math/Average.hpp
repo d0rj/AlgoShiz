@@ -1,6 +1,6 @@
 #pragma once
 
-#include <cmath>
+#include "Division.hpp"
 
 
 namespace AlgoShiz

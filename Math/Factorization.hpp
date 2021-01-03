@@ -1,7 +1,7 @@
 #pragma once
 
 #include <vector>
-#include <cmath>
+#include "Sqrt.hpp"
 
 
 namespace AlgoShiz
@@ -40,7 +40,7 @@ namespace AlgoShiz
 		if (n < 0)
 			return false;
 
-		for (int i = 2; i <= sqrt(n); ++i)
+		for (int i = 2; i <= Sqrt(n); ++i)
 			if (n % i == 0)
 				return false;
 
@@ -58,7 +58,7 @@ namespace AlgoShiz
 			n *= -1;
 		}
 
-		for (int probe = 2; probe <= sqrt(n); ++probe)
+		for (int probe = 2; probe <= Sqrt(n); ++probe)
 			if (n % probe == 0)
 			{
 				result.push_back(probe);

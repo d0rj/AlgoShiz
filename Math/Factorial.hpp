@@ -1,13 +1,11 @@
 #pragma once
 
-#include <cstdint>
-
 
 namespace AlgoShiz
 {
-	int64_t Factorial(int64_t n)
+	int Factorial(int n)
 	{
-		int64_t result = 1;
+		int result = 1;
 
 		while (n)
 			result *= n--;
