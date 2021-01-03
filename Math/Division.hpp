@@ -1,5 +1,7 @@
 #pragma once
 
+#include <cmath>
+
 
 namespace AlgoShiz
 {
@@ -9,10 +11,16 @@ namespace AlgoShiz
 		{
 			if (a >= b)
 				a %= b;
-			else 
+			else
 				b %= a;
 		}
 
 		return a == 0 ? b : a;
+	}
+
+
+	long long int LCM(long long unsigned a, long long unsigned b)
+	{
+		return std::abs((long long)(a * (b / GCD(a, b))));
 	}
 }

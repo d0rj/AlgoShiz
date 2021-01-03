@@ -17,14 +17,13 @@ add_executable(AlgoShiz
         Math/Average.hpp
         Math/DCT.hpp
         Math/Differentiation.hpp
+        Math/Division.hpp
         Math/Factorial.hpp
         Math/Factorization.hpp
         Math/Fibonacci.hpp
         Math/Gamma.hpp
-        Math/GCD.hpp
         Math/Integration.hpp
         Math/Interpolation.hpp
-        Math/LCM.hpp
         Math/Power.hpp
         Math/Similarity.hpp
         Math/SLAE.hpp
