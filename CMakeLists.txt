@@ -28,6 +28,7 @@ add_executable(AlgoShiz
         Math/Similarity.hpp
         Math/SLAE.hpp
         Math/Sqrt.hpp
+        Math/Utils.hpp
         Search/BinarySearch.hpp
         Search/LinearSearch.hpp
         Sorts/BeadSort.hpp

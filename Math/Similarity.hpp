@@ -1,8 +1,8 @@
 #pragma once
 
-#include <cmath>
 #include <vector>
 #include "../Arrays/Utils.hpp"
+#include "Utils.hpp"
 
 
 namespace Algoshiz
@@ -26,7 +26,7 @@ namespace Algoshiz
 		
 		std::vector<T>* minArr = (a >= b) ? &b : &a;
 		std::vector<T>* maxArr = (a >= b) ? &a : &b;
-		for (size_t i = 0; i < std::min(a, b); ++i)
+		for (size_t i = 0; i < min(a, b); ++i)
 			if (ElementIn(minArr->at(i), *maxArr))
 				++c;
 

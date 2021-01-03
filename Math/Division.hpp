@@ -1,6 +1,6 @@
 #pragma once
 
-#include <cmath>
+#include "Utils.hpp"
 
 
 namespace AlgoShiz
@@ -21,6 +21,6 @@ namespace AlgoShiz
 
 	long long int LCM(long long unsigned a, long long unsigned b)
 	{
-		return std::abs((long long)(a * (b / GCD(a, b))));
+		return abs((long long)(a * (b / GCD(a, b))));
 	}
 }
