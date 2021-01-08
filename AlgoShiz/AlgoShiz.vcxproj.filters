@@ -1,0 +1,147 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Исходные файлы">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Файлы заголовков">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="Файлы ресурсов">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Файлы заголовков\Sorts">
+      <UniqueIdentifier>{3adf5d9a-461f-4c69-8b32-0483d1571a77}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Файлы заголовков\Arrays">
+      <UniqueIdentifier>{8342c738-d268-4fc3-9e2c-acda8c9a9b03}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Файлы заголовков\Math">
+      <UniqueIdentifier>{214751a4-69ff-465a-97e9-da889351a041}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Файлы заголовков\Events">
+      <UniqueIdentifier>{6910551e-9f5a-4797-bf3f-22b5a82c2aa1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Файлы заголовков\Structures">
+      <UniqueIdentifier>{d40877cf-70e0-4640-8c7e-4597d72eeff6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Файлы заголовков\Search">
+      <UniqueIdentifier>{6cd58202-6268-4f10-92b9-f5cad83923bb}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Arrays\Generator.hpp">
+      <Filter>Файлы заголовков\Arrays</Filter>
+    </ClInclude>
+    <ClInclude Include="Arrays\Utils.hpp">
+      <Filter>Файлы заголовков\Arrays</Filter>
+    </ClInclude>
+    <ClInclude Include="Events\Event.hpp">
+      <Filter>Файлы заголовков\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="Math\Average.hpp">
+      <Filter>Файлы заголовков\Math</Filter>
+    </ClInclude>
+    <ClInclude Include="Math\DCT.hpp">
+      <Filter>Файлы заголовков\Math</Filter>
+    </ClInclude>
+    <ClInclude Include="Math\Differentiation.hpp">
+      <Filter>Файлы заголовков\Math</Filter>
+    </ClInclude>
+    <ClInclude Include="Math\Division.hpp">
+      <Filter>Файлы заголовков\Math</Filter>
+    </ClInclude>
+    <ClInclude Include="Math\Factorial.hpp">
+      <Filter>Файлы заголовков\Math</Filter>
+    </ClInclude>
+    <ClInclude Include="Math\Factorization.hpp">
+      <Filter>Файлы заголовков\Math</Filter>
+    </ClInclude>
+    <ClInclude Include="Math\Fibonacci.hpp">
+      <Filter>Файлы заголовков\Math</Filter>
+    </ClInclude>
+    <ClInclude Include="Math\Gamma.hpp">
+      <Filter>Файлы заголовков\Math</Filter>
+    </ClInclude>
+    <ClInclude Include="Math\Integration.hpp">
+      <Filter>Файлы заголовков\Math</Filter>
+    </ClInclude>
+    <ClInclude Include="Math\Interpolation.hpp">
+      <Filter>Файлы заголовков\Math</Filter>
+    </ClInclude>
+    <ClInclude Include="Math\Power.hpp">
+      <Filter>Файлы заголовков\Math</Filter>
+    </ClInclude>
+    <ClInclude Include="Math\Similarity.hpp">
+      <Filter>Файлы заголовков\Math</Filter>
+    </ClInclude>
+    <ClInclude Include="Math\SLAE.hpp">
+      <Filter>Файлы заголовков\Math</Filter>
+    </ClInclude>
+    <ClInclude Include="Math\Sqrt.hpp">
+      <Filter>Файлы заголовков\Math</Filter>
+    </ClInclude>
+    <ClInclude Include="Math\Utils.hpp">
+      <Filter>Файлы заголовков\Math</Filter>
+    </ClInclude>
+    <ClInclude Include="Search\BinarySearch.hpp">
+      <Filter>Файлы заголовков\Search</Filter>
+    </ClInclude>
+    <ClInclude Include="Search\LinearSearch.hpp">
+      <Filter>Файлы заголовков\Search</Filter>
+    </ClInclude>
+    <ClInclude Include="Sorts\BeadSort.hpp">
+      <Filter>Файлы заголовков\Sorts</Filter>
+    </ClInclude>
+    <ClInclude Include="Sorts\BubbleSort.hpp">
+      <Filter>Файлы заголовков\Sorts</Filter>
+    </ClInclude>
+    <ClInclude Include="Sorts\BucketSort.hpp">
+      <Filter>Файлы заголовков\Sorts</Filter>
+    </ClInclude>
+    <ClInclude Include="Sorts\CombSort.hpp">
+      <Filter>Файлы заголовков\Sorts</Filter>
+    </ClInclude>
+    <ClInclude Include="Sorts\CountingSort.hpp">
+      <Filter>Файлы заголовков\Sorts</Filter>
+    </ClInclude>
+    <ClInclude Include="Sorts\HeapSort.hpp">
+      <Filter>Файлы заголовков\Sorts</Filter>
+    </ClInclude>
+    <ClInclude Include="Sorts\InsertionSort.hpp">
+      <Filter>Файлы заголовков\Sorts</Filter>
+    </ClInclude>
+    <ClInclude Include="Sorts\MergeSort.hpp">
+      <Filter>Файлы заголовков\Sorts</Filter>
+    </ClInclude>
+    <ClInclude Include="Sorts\QuickSort.hpp">
+      <Filter>Файлы заголовков\Sorts</Filter>
+    </ClInclude>
+    <ClInclude Include="Sorts\RadixSort.hpp">
+      <Filter>Файлы заголовков\Sorts</Filter>
+    </ClInclude>
+    <ClInclude Include="Sorts\SelectionSort.hpp">
+      <Filter>Файлы заголовков\Sorts</Filter>
+    </ClInclude>
+    <ClInclude Include="Sorts\ShakerSort.hpp">
+      <Filter>Файлы заголовков\Sorts</Filter>
+    </ClInclude>
+    <ClInclude Include="Structures\LinkedList.hpp">
+      <Filter>Файлы заголовков\Structures</Filter>
+    </ClInclude>
+    <ClInclude Include="Structures\Vector.hpp">
+      <Filter>Файлы заголовков\Structures</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Math\README.html">
+      <Filter>Файлы заголовков\Math</Filter>
+    </None>
+    <None Include="Math\README.md">
+      <Filter>Файлы заголовков\Math</Filter>
+    </None>
+  </ItemGroup>
+</Project>
