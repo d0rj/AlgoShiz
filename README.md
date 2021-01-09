@@ -8,6 +8,8 @@ The main purpose is to save them for quick search in the future and the practice
 
 ## Repo structure
 
+The repository consists of two main parts: main code and tests.
+
 For convenience, there is a breakdown into categories:
 
 1. **Math**
