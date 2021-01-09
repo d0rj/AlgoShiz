@@ -1,5 +1,7 @@
 # AlgoShiz
 
+[![Build and test Actions Status](https://github.com/d0rj/AlgoShiz/workflows/MSBuild/badge.svg)](https://github.com/d0rj/AlgoShiz/actions)
+
 ## Description 
 
 A repository that implements various algorithms, data structures, useful functions and classes. 
