@@ -1,10 +1,12 @@
 #pragma once
 
+#include <cstdint>
+
 
 namespace AlgoShiz
 {
 	/// <summary> a^b </summary>
-	long double FastPower(int64_t a, int64_t b)
+	double FastPower(int64_t a, int64_t b)
 	{
 		if (!b)
 			return 1;
@@ -29,7 +31,7 @@ namespace AlgoShiz
 	/// <param name="x"> x </param>
 	/// <param name="y"> exponent </param>
 	/// <param name="n"> mod </param>
-	long int ModeExp(int x, int y, int n)
+	int ModeExp(int x, int y, int n)
 	{
 		if (!y)
 			return 1;
