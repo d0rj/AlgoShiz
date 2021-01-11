@@ -3,12 +3,12 @@
 
 namespace AlgoShiz
 {
-	long double Sqrt(long double n)
+	double Sqrt(double n)
 	{
-        long double left = 0;
-        long double right = n;
-        long double epsilon = 1e-14;
-        long double mid;
+        double left = 0;
+        double right = n;
+        double epsilon = 1e-14;
+        double mid;
 
         while (left <= right)
         {
@@ -32,17 +32,17 @@ namespace AlgoShiz
     /// <summary> n-th root of a </summary>
     /// <param name="a"> Value to root </param>
     /// <param name="n"> Root degree </param>
-    long double Root(long double a, int n)
+    double Root(double a, int n)
     {
         if (n == 0)
             return 1;
 
         if (n < 0)
-            return Root(a, -n);
+            return 1 / Root(a, -n);
 
-        long double eps = 1e-5;
-        long double root = a / n;
-        long double rn = a;
+        double eps = 1e-5;
+        double root = a / n;
+        double rn = a;
 
         while (abs(root - rn) >= eps)
         {
