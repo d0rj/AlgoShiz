@@ -152,6 +152,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Math\Average.cpp" />
     <ClCompile Include="Math\Division.cpp" />
     <ClCompile Include="Math\Factirization.cpp" />
     <ClCompile Include="Math\Integration.cpp" />
