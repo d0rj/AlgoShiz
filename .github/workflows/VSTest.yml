@@ -3,28 +3,28 @@ name: VSTest
 on: [push, pull_request]
 
 env:
-	SOLUTION_FILE_PATH: .
-	
-	BUILD_CONFIGURATION: Release
+  SOLUTION_FILE_PATH: .
+  
+  BUILD_CONFIGURATION: Release
 
 jobs:
-	build:
-		runs-on: windows-latest
+  build:
+    runs-on: windows-latest
 
-		steps:
-		- uses: actions/checkout@v2
+    steps:
+    - uses: actions/checkout@v2
 
-		- name: Add MSBuild to PATH
-			uses: microsoft/setup-msbuild@v1
+    - name: Add MSBuild to PATH
+      uses: microsoft/setup-msbuild@v1
 
-		- name: Build
-			working-directory: ${{env.GITHUB_WORKSPACE}}
-			run: msbuild /m /p:Configuration=${{env.BUILD_CONFIGURATION}} ${{env.SOLUTION_FILE_PATH}}
-			
-		- name: Setup VSTest and add to PATH
-			uses: darenm/Setup-VSTest@v1
-			id: setup_vstest
-			
-		- name: Run VSTest
-			id: run_vstest
-			run: vstest.console.exe /Platform:x64 D:\a\AlgoShiz\AlgoShiz\x64\Release\AlgoShiz_Tests.dll
+    - name: Build
+      working-directory: ${{env.GITHUB_WORKSPACE}}
+      run: msbuild /m /p:Configuration=${{env.BUILD_CONFIGURATION}} ${{env.SOLUTION_FILE_PATH}}
+      
+    - name: Setup VSTest and add to PATH
+      uses: darenm/Setup-VSTest@v1
+      id: setup_vstest
+      
+    - name: Run VSTest
+      id: run_vstest
+      run: vstest.console.exe /Platform:x64 D:\a\AlgoShiz\AlgoShiz\x64\Release\AlgoShiz_Tests.dll
