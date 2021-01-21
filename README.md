@@ -1,6 +1,7 @@
 # AlgoShiz
 
-[![Build and test Actions Status](https://github.com/d0rj/AlgoShiz/workflows/MSBuild/badge.svg)](https://github.com/d0rj/AlgoShiz/actions)
+[![Build Action Status](https://github.com/d0rj/AlgoShiz/workflows/MSBuild/badge.svg)](https://github.com/d0rj/AlgoShiz/actions)
+[![Test Action Status](https://github.com/d0rj/AlgoShiz/workflows/VSTest/badge.svg)](https://github.com/d0rj/AlgoShiz/actions)
 
 ## Description 
 
