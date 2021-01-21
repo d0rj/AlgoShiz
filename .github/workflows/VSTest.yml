@@ -1,0 +1,22 @@
+name: MSBuild
+
+on: [push]
+
+env:
+  SOLUTION_FILE_PATH: .
+  BUILD_CONFIGURATION: Release
+
+jobs:
+  build:
+    runs-on: windows-latest
+
+    steps:
+    - uses: actions/checkout@v2
+      
+    - name: Setup VSTest and add to PATH
+      uses: darenm/Setup-VSTest@v1
+      id: setup_vstest
+      
+    - name: Run VSTest
+      id: run_vstest
+      run: vstest.console.exe /Platform:x64 D:\a\AlgoShiz\AlgoShiz\x64\Release\AlgoShiz_Tests.dll
