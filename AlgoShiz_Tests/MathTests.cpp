@@ -2,9 +2,12 @@
 #include "CppUnitTest.h"
 #include "../AlgoShiz/Math/Division.hpp"
 #include "../AlgoShiz/Math/Factorization.hpp"
+#include "../AlgoShiz/Math/Integration.hpp"
 #include "../AlgoShiz/Math/Power.hpp"
 #include "../AlgoShiz/Math/Sqrt.hpp"
 #include "../AlgoShiz/Math/Utils.hpp"
+
+# define M_PI           3.14159265358979323846
 
 
 using namespace Microsoft::VisualStudio::CppUnitTestFramework;
@@ -187,6 +190,49 @@ namespace AlgoShizTests
 			num = -1 * 2 * 3;
 
 			Assert::IsTrue(right == Factorize(num));
+		}
+	};
+
+
+	TEST_CLASS(IntegrationTests)
+	{
+	public:
+		TEST_METHOD(IntegralRectangleTest)
+		{
+			double result = IntegralRectangle([](double x) { return 2 * x; }, 1, 2);
+			Assert::AreEqual(result, 3.0, 0.005); // because of 3.0 == 3.004 in compiler
+
+			result = IntegralRectangle([](double x) { return std::sin(x); }, 0, M_PI);
+			Assert::AreEqual(result, 2, 0.00001);
+
+			result = IntegralRectangle([](double x) { return x / (x - 1); }, 2, 3);
+			Assert::AreEqual(result, 1 + std::log(2), 0.002);
+		}
+
+
+		TEST_METHOD(IntegralTrapezoidalTest)
+		{
+			double result = IntegralTrapezoidal([](double x) { return 2 * x; }, 1, 2);
+			Assert::AreEqual(result, 3.0, 0.005); // because of 3.0 == 3.004 in compiler
+
+			result = IntegralTrapezoidal([](double x) { return std::sin(x); }, 0, M_PI);
+			Assert::AreEqual(result, 2, 0.00001);
+
+			result = IntegralTrapezoidal([](double x) { return x / (x - 1); }, 2, 3);
+			Assert::AreEqual(result, 1 + std::log(2), 0.002);
+		}
+
+
+		TEST_METHOD(IntegralSimpsonsTest)
+		{
+			double result = IntegralSimpsons([](double x) { return 2 * x; }, 1, 2);
+			Assert::AreEqual(result, 3.0, 0.005); // because of 3.0 == 3.004 in compiler
+
+			result = IntegralSimpsons([](double x) { return std::sin(x); }, 0, M_PI);
+			Assert::AreEqual(result, 2, 0.00001);
+
+			result = IntegralSimpsons([](double x) { return x / (x - 1); }, 2, 3);
+			Assert::AreEqual(result, 1 + std::log(2), 0.002);
 		}
 	};
 }
