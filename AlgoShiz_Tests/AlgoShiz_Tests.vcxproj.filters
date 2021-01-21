@@ -13,18 +13,28 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Исходные файлы\Math">
+      <UniqueIdentifier>{8f334c95-6b53-49a7-9a5d-8cd43ce7b43a}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="MathTests.cpp">
-      <Filter>Исходные файлы</Filter>
+    <ClCompile Include="Math\Division.cpp">
+      <Filter>Исходные файлы\Math</Filter>
     </ClCompile>
-    <ClCompile Include="pch.cpp">
-      <Filter>Исходные файлы</Filter>
+    <ClCompile Include="Math\Integration.cpp">
+      <Filter>Исходные файлы\Math</Filter>
     </ClCompile>
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="pch.h">
-      <Filter>Файлы заголовков</Filter>
-    </ClInclude>
+    <ClCompile Include="Math\Factirization.cpp">
+      <Filter>Исходные файлы\Math</Filter>
+    </ClCompile>
+    <ClCompile Include="Math\Power.cpp">
+      <Filter>Исходные файлы\Math</Filter>
+    </ClCompile>
+    <ClCompile Include="Math\Sqrt.cpp">
+      <Filter>Исходные файлы\Math</Filter>
+    </ClCompile>
+    <ClCompile Include="Math\Utils.cpp">
+      <Filter>Исходные файлы\Math</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
