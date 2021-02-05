@@ -3,7 +3,7 @@
 
 namespace AlgoShiz
 {
-	long long unsigned Fibonacci(long long unsigned n)
+	int Fibonacci(int n)
 	{
 		if (n <= 1)
 			return n;

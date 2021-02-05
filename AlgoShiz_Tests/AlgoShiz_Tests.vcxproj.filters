@@ -39,5 +39,8 @@
     <ClCompile Include="Math\Average.cpp">
       <Filter>Исходные файлы\Math</Filter>
     </ClCompile>
+    <ClCompile Include="Math\Fibonacci.cpp">
+      <Filter>Исходные файлы\Math</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
