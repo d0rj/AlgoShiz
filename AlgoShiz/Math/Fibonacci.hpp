@@ -5,6 +5,9 @@ namespace AlgoShiz
 {
 	int Fibonacci(int n)
 	{
+		if (n < 0)
+			return std::pow(-1, n + 1) * Fibonacci(-n);
+
 		if (n <= 1)
 			return n;
 
