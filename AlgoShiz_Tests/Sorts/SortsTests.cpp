@@ -9,6 +9,7 @@
 #include "../../AlgoShiz/Sorts/HeapSort.hpp"
 #include "../../AlgoShiz/Sorts/InsertionSort.hpp"
 #include "../../AlgoShiz/Sorts/MergeSort.hpp"
+#include "../../AlgoShiz/Sorts/QuickSort.hpp"
 
 
 using namespace Microsoft::VisualStudio::CppUnitTestFramework;
@@ -162,6 +163,14 @@ namespace Tests_Sorts
 			auto result = getUnsortedVector();
 			MergeSort(&result);
 			compareVector(result);
+		}
+
+
+		TEST_METHOD(QuickSortTest)
+		{
+			auto result = getUnsorted();
+			QuickSort(result, n);
+			compareArray(result);
 		}
 	};
 }
