@@ -26,7 +26,7 @@ namespace Tests_Sorts
 
 		int* getUnsorted()
 		{
-			int* result = new int[6];
+			int* result = new int[n];
 			std::copy(unsorted, unsorted + n, result);
 			return result;
 		}
@@ -71,9 +71,9 @@ namespace Tests_Sorts
 
 		TEST_METHOD(BubbleSortedTest)
 		{
-			auto result = getUnsortedVector();
-			result = BubbleSorted(&result);
-			compareVector(result);
+			auto unsorted = getUnsortedVector();
+
+			compareVector(BubbleSorted(&unsorted));
 		}
 
 
@@ -87,17 +87,17 @@ namespace Tests_Sorts
 
 		TEST_METHOD(BeadSortedTest)
 		{
-			auto result = getUnsortedVector();
-			result = BeadSorted(&result);
-			compareVector(result);
+			auto unsorted = getUnsortedVector();
+
+			compareVector(BeadSorted(&unsorted));
 		}
 
 
 		TEST_METHOD(BeadSortedTest_Array)
 		{
 			auto unsorted = getUnsorted();
-			auto result = BeadSorted(unsorted, n);
-			compareVector(result);
+			
+			compareVector(BeadSorted(unsorted, n));
 		}
 
 
@@ -143,9 +143,9 @@ namespace Tests_Sorts
 
 		TEST_METHOD(InsertionSortedTest)
 		{
-			auto result = getUnsortedVector();
-			result = InsertionSorted(&result);
-			compareVector(result);
+			auto unsorted = getUnsortedVector();
+			
+			compareVector(InsertionSorted(&unsorted));
 		}
 
 
