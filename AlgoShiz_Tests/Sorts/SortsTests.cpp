@@ -6,6 +6,7 @@
 #include "../../AlgoShiz/Sorts/BeadSort.hpp"
 #include "../../AlgoShiz/Sorts/CombSort.hpp"
 #include "../../AlgoShiz/Sorts/CountingSort.hpp"
+#include "../../AlgoShiz/Sorts/HeapSort.hpp"
 
 
 using namespace Microsoft::VisualStudio::CppUnitTestFramework;
@@ -32,8 +33,8 @@ namespace Tests_Sorts
 		{
 			auto unsorted = std::vector<int> { 3, 2, 6, 1, 5, 4 };
 			auto sorted = new int[6] { 1, 2, 3, 4, 5, 6 };
-			BubbleSort(&unsorted);
 
+			BubbleSort(&unsorted);
 			for (size_t i = 0; i < 6; ++i)
 				Assert::AreEqual(sorted[i], unsorted[i]);
 		}
@@ -47,8 +48,8 @@ namespace Tests_Sorts
 		{
 			auto unsorted = std::vector<int> { 3, 2, 6, 1, 5, 4 };
 			auto sorted = new int[6] { 1, 2, 3, 4, 5, 6 };
-			auto result = BeadSorted(&unsorted);
 
+			auto result = BeadSorted(&unsorted);
 			for (size_t i = 0; i < 6; ++i)
 				Assert::AreEqual(sorted[i], result[i]);
 		}
@@ -58,8 +59,8 @@ namespace Tests_Sorts
 		{
 			auto unsorted = new int[6] { 3, 2, 6, 1, 5, 4 };
 			auto sorted = new int[6] { 1, 2, 3, 4, 5, 6 };
-			auto result = BeadSorted(unsorted, 6);
 
+			auto result = BeadSorted(unsorted, 6);
 			for (size_t i = 0; i < 6; ++i)
 				Assert::AreEqual(sorted[i], result[i]);
 		}
@@ -73,8 +74,8 @@ namespace Tests_Sorts
 		{
 			auto unsorted = std::vector<int> { 3, 2, 6, 1, 5, 4 };
 			auto sorted = new int[6] { 1, 2, 3, 4, 5, 6 };
-			CombSort(unsorted);
 
+			CombSort(unsorted);
 			for (size_t i = 0; i < 6; ++i)
 				Assert::AreEqual(sorted[i], unsorted[i]);
 		}
@@ -84,8 +85,8 @@ namespace Tests_Sorts
 		{
 			auto unsorted = std::vector<int>{ 3, 2, 6, 1, 5, 4 };
 			auto sorted = new int[6]{ 1, 2, 3, 4, 5, 6 };
-			CombSort(&unsorted);
 
+			CombSort(&unsorted);
 			for (size_t i = 0; i < 6; ++i)
 				Assert::AreEqual(sorted[i], unsorted[i]);
 		}
@@ -99,8 +100,23 @@ namespace Tests_Sorts
 		{
 			auto unsorted = new int[6] { 3, 2, 6, 1, 5, 4 };
 			auto sorted = new int[6] { 1, 2, 3, 4, 5, 6 };
-			CountingSort(unsorted, 6);
 
+			CountingSort(unsorted, 6);
+			for (size_t i = 0; i < 6; ++i)
+				Assert::AreEqual(sorted[i], unsorted[i]);
+		}
+	};
+
+
+	TEST_CLASS(HeapSortTests)
+	{
+	public:
+		TEST_METHOD(HeapSortTest)
+		{
+			auto unsorted = new int[6]{ 3, 2, 6, 1, 5, 4 };
+			auto sorted = new int[6]{ 1, 2, 3, 4, 5, 6 };
+
+			HeapSort(unsorted, 6);
 			for (size_t i = 0; i < 6; ++i)
 				Assert::AreEqual(sorted[i], unsorted[i]);
 		}
