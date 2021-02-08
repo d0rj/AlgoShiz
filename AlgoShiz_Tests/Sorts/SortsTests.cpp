@@ -10,6 +10,7 @@
 #include "../../AlgoShiz/Sorts/InsertionSort.hpp"
 #include "../../AlgoShiz/Sorts/MergeSort.hpp"
 #include "../../AlgoShiz/Sorts/QuickSort.hpp"
+#include "../../AlgoShiz/Sorts/RadixSort.hpp"
 
 
 using namespace Microsoft::VisualStudio::CppUnitTestFramework;
@@ -170,6 +171,14 @@ namespace Tests_Sorts
 		{
 			auto result = getUnsorted();
 			QuickSort(result, n);
+			compareArray(result);
+		}
+
+
+		TEST_METHOD(RadixSortTest)
+		{
+			auto result = getUnsorted();
+			RadixSort(result, n);
 			compareArray(result);
 		}
 	};
