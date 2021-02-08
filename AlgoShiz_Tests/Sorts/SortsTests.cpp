@@ -7,6 +7,7 @@
 #include "../../AlgoShiz/Sorts/CombSort.hpp"
 #include "../../AlgoShiz/Sorts/CountingSort.hpp"
 #include "../../AlgoShiz/Sorts/HeapSort.hpp"
+#include "../../AlgoShiz/Sorts/InsertionSort.hpp"
 
 
 using namespace Microsoft::VisualStudio::CppUnitTestFramework;
@@ -113,12 +114,38 @@ namespace Tests_Sorts
 	public:
 		TEST_METHOD(HeapSortTest)
 		{
-			auto unsorted = new int[6]{ 3, 2, 6, 1, 5, 4 };
-			auto sorted = new int[6]{ 1, 2, 3, 4, 5, 6 };
+			auto unsorted = new int[6] { 3, 2, 6, 1, 5, 4 };
+			auto sorted = new int[6] { 1, 2, 3, 4, 5, 6 };
 
 			HeapSort(unsorted, 6);
 			for (size_t i = 0; i < 6; ++i)
 				Assert::AreEqual(sorted[i], unsorted[i]);
+		}
+	};
+
+
+	TEST_CLASS(InsertionSortTests)
+	{
+	public:
+		TEST_METHOD(InsertionSortTest)
+		{
+			auto unsorted = std::vector<int> { 3, 2, 6, 1, 5, 4 };
+			auto sorted = new int[6] { 1, 2, 3, 4, 5, 6 };
+
+			InsertionSort(&unsorted);
+			for (size_t i = 0; i < 6; ++i)
+				Assert::AreEqual(sorted[i], unsorted[i]);
+		}
+
+
+		TEST_METHOD(InsertionSortedTest)
+		{
+			auto unsorted = std::vector<int>{ 3, 2, 6, 1, 5, 4 };
+			auto sorted = new int[6]{ 1, 2, 3, 4, 5, 6 };
+
+			auto result = InsertionSorted(&unsorted);
+			for (size_t i = 0; i < 6; ++i)
+				Assert::AreEqual(sorted[i], result[i]);
 		}
 	};
 }
