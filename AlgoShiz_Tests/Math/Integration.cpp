@@ -8,7 +8,7 @@ using namespace Microsoft::VisualStudio::CppUnitTestFramework;
 using namespace AlgoShiz;
 
 
-namespace AlgoShizTests
+namespace Tests_Math
 {
 	TEST_CLASS(IntegrationTests)
 	{

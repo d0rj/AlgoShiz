@@ -6,7 +6,7 @@ using namespace Microsoft::VisualStudio::CppUnitTestFramework;
 using namespace AlgoShiz;
 
 
-namespace AlgoShizTests
+namespace Tests_Sorts
 {
 	TEST_CLASS(SortsTests)
 	{
