@@ -20,9 +20,9 @@ namespace Tests_Sorts
 		TEST_METHOD(BubbleSortedTest)
 		{
 			auto unsorted = std::vector<int>{ 3, 2, 6, 1, 5, 4 };
-			auto sorted = std::vector<int>{ 1, 2, 3, 4, 5, 6 };
-			std::vector<int> result = BubbleSorted(&unsorted);
+			auto sorted = new int[6] { 1, 2, 3, 4, 5, 6 };
 
+			auto result = BubbleSorted(&unsorted);
 			for (size_t i = 0; i < 6; ++i)
 				Assert::AreEqual(sorted[i], result[i]);
 		}
@@ -30,8 +30,8 @@ namespace Tests_Sorts
 
 		TEST_METHOD(BubbleSortTest)
 		{
-			auto unsorted = std::vector<int>{ 3, 2, 6, 1, 5, 4 };
-			auto sorted = std::vector<int>{ 1, 2, 3, 4, 5, 6 };
+			auto unsorted = std::vector<int> { 3, 2, 6, 1, 5, 4 };
+			auto sorted = new int[6] { 1, 2, 3, 4, 5, 6 };
 			BubbleSort(&unsorted);
 
 			for (size_t i = 0; i < 6; ++i)
@@ -45,8 +45,8 @@ namespace Tests_Sorts
 	public:
 		TEST_METHOD(BeadSortedTest)
 		{
-			auto unsorted = std::vector<int>{ 3, 2, 6, 1, 5, 4 };
-			auto sorted = std::vector<int>{ 1, 2, 3, 4, 5, 6 };
+			auto unsorted = std::vector<int> { 3, 2, 6, 1, 5, 4 };
+			auto sorted = new int[6] { 1, 2, 3, 4, 5, 6 };
 			auto result = BeadSorted(&unsorted);
 
 			for (size_t i = 0; i < 6; ++i)
