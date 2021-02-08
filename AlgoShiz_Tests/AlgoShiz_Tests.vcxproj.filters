@@ -42,5 +42,8 @@
     <ClCompile Include="Math\Fibonacci.cpp">
       <Filter>Исходные файлы\Math</Filter>
     </ClCompile>
+    <ClCompile Include="Math\Factorial.cpp">
+      <Filter>Исходные файлы\Math</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

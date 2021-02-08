@@ -155,6 +155,7 @@
     <ClCompile Include="Math\Average.cpp" />
     <ClCompile Include="Math\Division.cpp" />
     <ClCompile Include="Math\Factirization.cpp" />
+    <ClCompile Include="Math\Factorial.cpp" />
     <ClCompile Include="Math\Fibonacci.cpp" />
     <ClCompile Include="Math\Integration.cpp" />
     <ClCompile Include="Math\Power.cpp" />
