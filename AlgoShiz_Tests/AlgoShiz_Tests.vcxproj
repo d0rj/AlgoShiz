@@ -161,6 +161,7 @@
     <ClCompile Include="Math\Power.cpp" />
     <ClCompile Include="Math\Sqrt.cpp" />
     <ClCompile Include="Math\Utils.cpp" />
+    <ClCompile Include="Sorts\SortsTests.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

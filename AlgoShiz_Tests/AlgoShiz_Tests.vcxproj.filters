@@ -16,6 +16,9 @@
     <Filter Include="Исходные файлы\Math">
       <UniqueIdentifier>{8f334c95-6b53-49a7-9a5d-8cd43ce7b43a}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Исходные файлы\Sorts">
+      <UniqueIdentifier>{82d94b79-6404-4e76-af06-4f4268cc88d2}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Math\Division.cpp">
@@ -44,6 +47,9 @@
     </ClCompile>
     <ClCompile Include="Math\Factorial.cpp">
       <Filter>Исходные файлы\Math</Filter>
+    </ClCompile>
+    <ClCompile Include="Sorts\SortsTests.cpp">
+      <Filter>Исходные файлы\Sorts</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
