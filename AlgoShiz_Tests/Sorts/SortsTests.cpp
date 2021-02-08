@@ -20,7 +20,7 @@ namespace Tests_Sorts
 	TEST_CLASS(AllSortsTests)
 	{
 	private:
-		const size_t n = 6;
+		static const size_t n = 6;
 		const int* sorted = new int[6] { 1, 2, 3, 4, 5, 6 };
 		const int* unsorted = new int[6] { 3, 2, 6, 1, 5, 4 };
 
@@ -39,15 +39,41 @@ namespace Tests_Sorts
 			return result;
 		}
 
+
+		void compareArrays(int* expected, int* actual, size_t size = n) const
+		{
+			for (size_t i = 0; i < size; ++i)
+				Assert::AreEqual(expected[i], actual[i]);
+		}
+
+
+		void compareArray(int* actual) const
+		{
+			compareArrays((int*)sorted, actual);
+		}
+
+
+		void compareWithVector(int* expected, std::vector<int> actual, size_t size = n)const
+		{
+			Assert::AreEqual(size, actual.size());
+
+			for (size_t i = 0; i < size; ++i)
+				Assert::AreEqual(expected[i], actual[i]);
+		}
+
+
+		void compareVector(std::vector<int> actual) const
+		{
+			compareWithVector((int*)sorted, actual);
+		}
+
 	public:
 
 		TEST_METHOD(BubbleSortedTest)
 		{
 			auto result = getUnsortedVector();
 			result = BubbleSorted(&result);
-
-			for (size_t i = 0; i < n; ++i)
-				Assert::AreEqual(sorted[i], result[i]);
+			compareVector(result);
 		}
 
 
@@ -55,9 +81,7 @@ namespace Tests_Sorts
 		{
 			auto result = getUnsortedVector();
 			BubbleSort(&result);
-
-			for (size_t i = 0; i < n; ++i)
-				Assert::AreEqual(sorted[i], result[i]);
+			compareVector(result);
 		}
 
 
@@ -65,9 +89,7 @@ namespace Tests_Sorts
 		{
 			auto result = getUnsortedVector();
 			result = BeadSorted(&result);
-
-			for (size_t i = 0; i < n; ++i)
-				Assert::AreEqual(sorted[i], result[i]);
+			compareVector(result);
 		}
 
 
@@ -75,9 +97,7 @@ namespace Tests_Sorts
 		{
 			auto unsorted = getUnsorted();
 			auto result = BeadSorted(unsorted, n);
-
-			for (size_t i = 0; i < n; ++i)
-				Assert::AreEqual(sorted[i], result[i]);
+			compareVector(result);
 		}
 
 
@@ -85,9 +105,7 @@ namespace Tests_Sorts
 		{
 			auto result = getUnsortedVector();
 			CombSort(result);
-
-			for (size_t i = 0; i < n; ++i)
-				Assert::AreEqual(sorted[i], result[i]);
+			compareVector(result);
 		}
 
 
@@ -95,9 +113,7 @@ namespace Tests_Sorts
 		{
 			auto result = getUnsortedVector();
 			CombSort(&result);
-
-			for (size_t i = 0; i < n; ++i)
-				Assert::AreEqual(sorted[i], result[i]);
+			compareVector(result);
 		}
 
 
@@ -105,29 +121,23 @@ namespace Tests_Sorts
 		{
 			auto result = getUnsorted();
 			CountingSort(result, n);
-
-			for (size_t i = 0; i < n; ++i)
-				Assert::AreEqual(sorted[i], result[i]);
+			compareArray(result);
 		}
 		
 
 		TEST_METHOD(HeapSortTest)
 		{
 			auto result = getUnsorted();
-			HeapSort(result, 6);
-
-			for (size_t i = 0; i < n; ++i)
-				Assert::AreEqual(sorted[i], result[i]);
+			HeapSort(result, n);
+			compareArray(result);
 		}
 
 
 		TEST_METHOD(InsertionSortTest)
 		{
 			auto result = getUnsortedVector();
-
 			InsertionSort(&result);
-			for (size_t i = 0; i < 6; ++i)
-				Assert::AreEqual(sorted[i], result[i]);
+			compareVector(result);
 		}
 
 
@@ -135,9 +145,7 @@ namespace Tests_Sorts
 		{
 			auto result = getUnsortedVector();
 			result = InsertionSorted(&result);
-
-			for (size_t i = 0; i < n; ++i)
-				Assert::AreEqual(sorted[i], result[i]);
+			compareVector(result);
 		}
 
 
@@ -145,9 +153,7 @@ namespace Tests_Sorts
 		{
 			auto result = getUnsorted();
 			MergeSort(result, n);
-
-			for (size_t i = 0; i < n; ++i)
-				Assert::AreEqual(sorted[i], result[i]);
+			compareArray(result);
 		}
 
 
@@ -155,9 +161,7 @@ namespace Tests_Sorts
 		{
 			auto result = getUnsortedVector();
 			MergeSort(&result);
-
-			for (size_t i = 0; i < n; ++i)
-				Assert::AreEqual(sorted[i], result[i]);
+			compareVector(result);
 		}
 	};
 }
