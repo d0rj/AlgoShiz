@@ -17,162 +17,147 @@ using namespace AlgoShiz;
 
 namespace Tests_Sorts
 {
-	TEST_CLASS(BubbleSortTests)
+	TEST_CLASS(AllSortsTests)
 	{
+	private:
+		const size_t n = 6;
+		const int* sorted = new int[6] { 1, 2, 3, 4, 5, 6 };
+		const int* unsorted = new int[6] { 3, 2, 6, 1, 5, 4 };
+
+		int* getUnsorted()
+		{
+			int* result = new int[6];
+			std::copy(unsorted, unsorted + n, result);
+			return result;
+		}
+
+
+		std::vector<int> getUnsortedVector()
+		{
+			auto res = getUnsorted();
+			std::vector<int> result(res, res + n);
+			return result;
+		}
+
 	public:
+
 		TEST_METHOD(BubbleSortedTest)
 		{
-			auto unsorted = std::vector<int>{ 3, 2, 6, 1, 5, 4 };
-			auto sorted = new int[6] { 1, 2, 3, 4, 5, 6 };
+			auto result = getUnsortedVector();
+			result = BubbleSorted(&result);
 
-			auto result = BubbleSorted(&unsorted);
-			for (size_t i = 0; i < 6; ++i)
+			for (size_t i = 0; i < n; ++i)
 				Assert::AreEqual(sorted[i], result[i]);
 		}
 
 
 		TEST_METHOD(BubbleSortTest)
 		{
-			auto unsorted = std::vector<int> { 3, 2, 6, 1, 5, 4 };
-			auto sorted = new int[6] { 1, 2, 3, 4, 5, 6 };
+			auto result = getUnsortedVector();
+			BubbleSort(&result);
 
-			BubbleSort(&unsorted);
-			for (size_t i = 0; i < 6; ++i)
-				Assert::AreEqual(sorted[i], unsorted[i]);
+			for (size_t i = 0; i < n; ++i)
+				Assert::AreEqual(sorted[i], result[i]);
 		}
-	};
 
 
-	TEST_CLASS(BeadSortTests)
-	{
-	public:
 		TEST_METHOD(BeadSortedTest)
 		{
-			auto unsorted = std::vector<int> { 3, 2, 6, 1, 5, 4 };
-			auto sorted = new int[6] { 1, 2, 3, 4, 5, 6 };
+			auto result = getUnsortedVector();
+			result = BeadSorted(&result);
 
-			auto result = BeadSorted(&unsorted);
-			for (size_t i = 0; i < 6; ++i)
+			for (size_t i = 0; i < n; ++i)
 				Assert::AreEqual(sorted[i], result[i]);
 		}
 
 
 		TEST_METHOD(BeadSortedTest_Array)
 		{
-			auto unsorted = new int[6] { 3, 2, 6, 1, 5, 4 };
-			auto sorted = new int[6] { 1, 2, 3, 4, 5, 6 };
+			auto unsorted = getUnsorted();
+			auto result = BeadSorted(unsorted, n);
 
-			auto result = BeadSorted(unsorted, 6);
-			for (size_t i = 0; i < 6; ++i)
+			for (size_t i = 0; i < n; ++i)
 				Assert::AreEqual(sorted[i], result[i]);
 		}
-	};
 
 
-	TEST_CLASS(CombSortTests)
-	{
-	public:
-		TEST_METHOD(BucketSortTest)
+		TEST_METHOD(CombSortTest)
 		{
-			auto unsorted = std::vector<int> { 3, 2, 6, 1, 5, 4 };
-			auto sorted = new int[6] { 1, 2, 3, 4, 5, 6 };
+			auto result = getUnsortedVector();
+			CombSort(result);
 
-			CombSort(unsorted);
-			for (size_t i = 0; i < 6; ++i)
-				Assert::AreEqual(sorted[i], unsorted[i]);
+			for (size_t i = 0; i < n; ++i)
+				Assert::AreEqual(sorted[i], result[i]);
 		}
 
 
-		TEST_METHOD(BucketSortTest_ref)
+		TEST_METHOD(CombSortTest_ref)
 		{
-			auto unsorted = std::vector<int>{ 3, 2, 6, 1, 5, 4 };
-			auto sorted = new int[6]{ 1, 2, 3, 4, 5, 6 };
+			auto result = getUnsortedVector();
+			CombSort(&result);
 
-			CombSort(&unsorted);
-			for (size_t i = 0; i < 6; ++i)
-				Assert::AreEqual(sorted[i], unsorted[i]);
+			for (size_t i = 0; i < n; ++i)
+				Assert::AreEqual(sorted[i], result[i]);
 		}
-	};
 
 
-	TEST_CLASS(CountingSortTests)
-	{
-	public:
 		TEST_METHOD(CountingSortTest)
 		{
-			auto unsorted = new int[6] { 3, 2, 6, 1, 5, 4 };
-			auto sorted = new int[6] { 1, 2, 3, 4, 5, 6 };
+			auto result = getUnsorted();
+			CountingSort(result, n);
 
-			CountingSort(unsorted, 6);
-			for (size_t i = 0; i < 6; ++i)
-				Assert::AreEqual(sorted[i], unsorted[i]);
+			for (size_t i = 0; i < n; ++i)
+				Assert::AreEqual(sorted[i], result[i]);
 		}
-	};
+		
 
-
-	TEST_CLASS(HeapSortTests)
-	{
-	public:
 		TEST_METHOD(HeapSortTest)
 		{
-			auto unsorted = new int[6] { 3, 2, 6, 1, 5, 4 };
-			auto sorted = new int[6] { 1, 2, 3, 4, 5, 6 };
+			auto result = getUnsorted();
+			HeapSort(result, 6);
 
-			HeapSort(unsorted, 6);
-			for (size_t i = 0; i < 6; ++i)
-				Assert::AreEqual(sorted[i], unsorted[i]);
+			for (size_t i = 0; i < n; ++i)
+				Assert::AreEqual(sorted[i], result[i]);
 		}
-	};
 
 
-	TEST_CLASS(InsertionSortTests)
-	{
-	public:
 		TEST_METHOD(InsertionSortTest)
 		{
-			auto unsorted = std::vector<int> { 3, 2, 6, 1, 5, 4 };
-			auto sorted = new int[6] { 1, 2, 3, 4, 5, 6 };
+			auto result = getUnsortedVector();
 
-			InsertionSort(&unsorted);
+			InsertionSort(&result);
 			for (size_t i = 0; i < 6; ++i)
-				Assert::AreEqual(sorted[i], unsorted[i]);
+				Assert::AreEqual(sorted[i], result[i]);
 		}
 
 
 		TEST_METHOD(InsertionSortedTest)
 		{
-			auto unsorted = std::vector<int> { 3, 2, 6, 1, 5, 4 };
-			auto sorted = new int[6] { 1, 2, 3, 4, 5, 6 };
+			auto result = getUnsortedVector();
+			result = InsertionSorted(&result);
 
-			auto result = InsertionSorted(&unsorted);
-			for (size_t i = 0; i < 6; ++i)
+			for (size_t i = 0; i < n; ++i)
 				Assert::AreEqual(sorted[i], result[i]);
 		}
-	};
 
 
-	TEST_CLASS(MergeSortTests)
-	{
-	public:
 		TEST_METHOD(MergeSortTest_Array)
 		{
-			auto unsorted = new int[6] { 3, 2, 6, 1, 5, 4 };
-			auto sorted = new int[6] { 1, 2, 3, 4, 5, 6 };
+			auto result = getUnsorted();
+			MergeSort(result, n);
 
-			MergeSort(unsorted, 6);
-			for (size_t i = 0; i < 6; ++i)
-				Assert::AreEqual(sorted[i], unsorted[i]);
+			for (size_t i = 0; i < n; ++i)
+				Assert::AreEqual(sorted[i], result[i]);
 		}
 
 
 		TEST_METHOD(MergeSortTest_Vector)
 		{
-			auto unsorted = std::vector<int> { 3, 2, 6, 1, 5, 4 };
-			auto sorted = new int[6] { 1, 2, 3, 4, 5, 6 };
+			auto result = getUnsortedVector();
+			MergeSort(&result);
 
-			MergeSort(&unsorted);
-			for (size_t i = 0; i < 6; ++i)
-				Assert::AreEqual(sorted[i], unsorted[i]);
+			for (size_t i = 0; i < n; ++i)
+				Assert::AreEqual(sorted[i], result[i]);
 		}
 	};
 }
