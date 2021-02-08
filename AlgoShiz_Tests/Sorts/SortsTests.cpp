@@ -5,6 +5,7 @@
 #include "../../AlgoShiz/Sorts/BubbleSort.hpp"
 #include "../../AlgoShiz/Sorts/BeadSort.hpp"
 #include "../../AlgoShiz/Sorts/CombSort.hpp"
+#include "../../AlgoShiz/Sorts/CountingSort.hpp"
 
 
 using namespace Microsoft::VisualStudio::CppUnitTestFramework;
@@ -84,6 +85,21 @@ namespace Tests_Sorts
 			auto unsorted = std::vector<int>{ 3, 2, 6, 1, 5, 4 };
 			auto sorted = new int[6]{ 1, 2, 3, 4, 5, 6 };
 			CombSort(&unsorted);
+
+			for (size_t i = 0; i < 6; ++i)
+				Assert::AreEqual(sorted[i], unsorted[i]);
+		}
+	};
+
+
+	TEST_CLASS(CountingSortTests)
+	{
+	public:
+		TEST_METHOD(CountingSortTest)
+		{
+			auto unsorted = new int[6] { 3, 2, 6, 1, 5, 4 };
+			auto sorted = new int[6] { 1, 2, 3, 4, 5, 6 };
+			CountingSort(unsorted, 6);
 
 			for (size_t i = 0; i < 6; ++i)
 				Assert::AreEqual(sorted[i], unsorted[i]);
