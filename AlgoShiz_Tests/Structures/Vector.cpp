@@ -43,12 +43,14 @@ namespace Tests_Structures
 			vec.PushBack(3);
 			vec.PushBack(4);
 
+			Assert::AreEqual((size_t)5, vec.Length());
 			for (size_t i = 0; i < vec.Length(); ++i)
 				Assert::AreEqual((int)i, vec[i]);
 
 			vec.PushBack(5);
 			vec.PushBack(6);
 
+			Assert::AreEqual((size_t)7, vec.Length());
 			for (size_t i = 0; i < vec.Length(); ++i)
 				Assert::AreEqual((int)i, vec[i]);
 		}
@@ -62,6 +64,7 @@ namespace Tests_Structures
 			vec.PushForward(4);
 			vec.PushForward(3);
 
+			Assert::AreEqual((size_t)4, vec.Length());
 			for (size_t i = 0; i < vec.Length(); ++i)
 				Assert::AreEqual((int)(i + 3), vec[i]);
 
@@ -69,6 +72,7 @@ namespace Tests_Structures
 			vec.PushForward(1);
 			vec.PushForward(0);
 
+			Assert::AreEqual((size_t)7, vec.Length());
 			for (size_t i = 0; i < vec.Length(); ++i)
 				Assert::AreEqual((int)i, vec[i]);
 		}
@@ -83,6 +87,7 @@ namespace Tests_Structures
 			vec.PushBack(3);
 			vec.PushBack(4);
 
+			Assert::AreEqual((size_t)5, vec.Length());
 			int i = 4;
 			while (vec.Length() > 0)
 			{
@@ -95,6 +100,7 @@ namespace Tests_Structures
 			vec.PushBack(1);
 			vec.PushBack(0);
 
+			Assert::AreEqual((size_t)4, vec.Length());
 			i = 0;
 			while (vec.Length() > 0)
 			{
@@ -114,6 +120,7 @@ namespace Tests_Structures
 			vec.PushBack(4);
 			vec.PushBack(5);
 
+			Assert::AreEqual((size_t)6, vec.Length());
 			int i = 0;
 			while (vec.Length() > 0)
 			{
@@ -125,6 +132,7 @@ namespace Tests_Structures
 			vec.PushBack(5);
 			vec.PushBack(6);
 
+			Assert::AreEqual((size_t)3, vec.Length());
 			i = 4;
 			while (vec.Length() > 0)
 			{
