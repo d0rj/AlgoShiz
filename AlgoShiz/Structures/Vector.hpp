@@ -69,7 +69,7 @@ namespace AlgoShiz
 			if (capacity <= count)
 				Reserve(capacity << 1);
 
-			for (int i = count; i >= 1; ++i)
+			for (int i = count; i >= 1; --i)
 				arr[i] = arr[i - 1];
 
 			arr[0] = element;
