@@ -11,6 +11,7 @@
 #include "../../AlgoShiz/Sorts/MergeSort.hpp"
 #include "../../AlgoShiz/Sorts/QuickSort.hpp"
 #include "../../AlgoShiz/Sorts/RadixSort.hpp"
+#include "../../AlgoShiz/Sorts/SelectionSort.hpp"
 
 
 using namespace Microsoft::VisualStudio::CppUnitTestFramework;
@@ -180,6 +181,22 @@ namespace Tests_Sorts
 			auto result = getUnsorted();
 			RadixSort(result, n);
 			compareArray(result);
+		}
+
+
+		TEST_METHOD(SelectionSortedTest)
+		{
+			auto unsorted = getUnsortedVector();
+			
+			compareVector(SelectionSorted(&unsorted));
+		}
+
+
+		TEST_METHOD(SelectionSortTest)
+		{
+			auto result = getUnsortedVector();
+			SelectionSort(&result);
+			compareVector(result);
 		}
 	};
 }
