@@ -72,5 +72,65 @@ namespace Tests_Structures
 			for (size_t i = 0; i < vec.Length(); ++i)
 				Assert::AreEqual((int)i, vec[i]);
 		}
+
+
+		TEST_METHOD(PopBackTest)
+		{
+			auto vec = Vector<int>();
+			vec.PushBack(0);
+			vec.PushBack(1);
+			vec.PushBack(2);
+			vec.PushBack(3);
+			vec.PushBack(4);
+
+			int i = 4;
+			while (vec.Length() > 0)
+			{
+				Assert::AreEqual(i, vec.PopBack());
+				--i;
+			}
+
+			vec.PushBack(3);
+			vec.PushBack(2);
+			vec.PushBack(1);
+			vec.PushBack(0);
+
+			i = 0;
+			while (vec.Length() > 0)
+			{
+				Assert::AreEqual(i, vec.PopBack());
+				++i;
+			}
+		}
+
+
+		TEST_METHOD(PopForwardTest)
+		{
+			auto vec = Vector<int>();
+			vec.PushBack(0);
+			vec.PushBack(1);
+			vec.PushBack(2);
+			vec.PushBack(3);
+			vec.PushBack(4);
+			vec.PushBack(5);
+
+			int i = 0;
+			while (vec.Length() > 0)
+			{
+				Assert::AreEqual(i, vec.PopForward());
+				++i;
+			}
+
+			vec.PushBack(4);
+			vec.PushBack(5);
+			vec.PushBack(6);
+
+			i = 4;
+			while (vec.Length() > 0)
+			{
+				Assert::AreEqual(i, vec.PopForward());
+				++i;
+			}
+		}
 	};
 }
