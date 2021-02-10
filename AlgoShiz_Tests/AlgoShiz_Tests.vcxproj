@@ -161,6 +161,7 @@
     <ClCompile Include="Math\Power.cpp" />
     <ClCompile Include="Math\Sqrt.cpp" />
     <ClCompile Include="Math\Utils.cpp" />
+    <ClCompile Include="Search\SearchesTests.cpp" />
     <ClCompile Include="Sorts\SortsTests.cpp" />
     <ClCompile Include="Structures\Vector.cpp" />
   </ItemGroup>

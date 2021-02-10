@@ -22,6 +22,9 @@
     <Filter Include="Исходные файлы\Structures">
       <UniqueIdentifier>{d7ec3ed7-0c21-4474-aa5d-f7f76445a0e9}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Исходные файлы\Search">
+      <UniqueIdentifier>{56de3373-0d0a-4d4c-bb89-e364da9d6d8f}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Math\Division.cpp">
@@ -56,6 +59,9 @@
     </ClCompile>
     <ClCompile Include="Structures\Vector.cpp">
       <Filter>Исходные файлы\Structures</Filter>
+    </ClCompile>
+    <ClCompile Include="Search\SearchesTests.cpp">
+      <Filter>Исходные файлы\Search</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
