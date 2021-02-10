@@ -140,5 +140,33 @@ namespace Tests_Structures
 				++i;
 			}
 		}
+
+
+		TEST_METHOD(PlusOperatorTest)
+		{
+			auto vec = Vector<int>();
+			vec = vec + 1;
+			vec = vec + 2;
+			vec = vec + 3;
+			vec = vec + 4;
+
+			Assert::AreEqual((size_t)4, vec.Length());
+			for (size_t i = 0; i < vec.Length(); ++i)
+				Assert::AreEqual((int)(i + 1), vec[i]);
+		}
+
+
+		TEST_METHOD(PlusEqualOperatorTest)
+		{
+			auto vec = Vector<int>();
+			vec += 1;
+			vec += 2;
+			vec += 3;
+			vec += 4;
+
+			Assert::AreEqual((size_t)4, vec.Length());
+			for (size_t i = 0; i < vec.Length(); ++i)
+				Assert::AreEqual((int)(i + 1), vec[i]);
+		}
 	};
 }
