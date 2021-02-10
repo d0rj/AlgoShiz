@@ -57,6 +57,51 @@ namespace Tests_Searches
 			Assert::AreEqual(0, findedIndex);
 		}
 
+
+		void testWithRandomArray(std::function<int(int*, size_t, int)> search)
+		{
+			int* arr = new int[10] { 11, 2, 7, 4, 7, 6, 3, 5, 9, 2 };
+
+			auto findedIndex = search(arr, 10, 11);
+			Assert::AreEqual(0, findedIndex);
+
+			findedIndex = search(arr, 10, 4);
+			Assert::AreEqual(3, findedIndex);
+
+			findedIndex = search(arr, 10, 1);
+			Assert::AreEqual(-1, findedIndex);
+		}
+
+
+		void testWithRandomVector(std::function<int(std::vector<int>&, int)> search)
+		{
+			std::vector<int> arr = { 11, 2, 7, 4, 7, 6, 3, 5, 9, 2 };
+
+			auto findedIndex = search(arr, 11);
+			Assert::AreEqual(0, findedIndex);
+
+			findedIndex = search(arr, 4);
+			Assert::AreEqual(3, findedIndex);
+
+			findedIndex = search(arr, 1);
+			Assert::AreEqual(-1, findedIndex);
+		}
+
+
+		void testWithRandomVectorPointer(std::function<int(std::vector<int>*, int)> search)
+		{
+			std::vector<int> arr = { 11, 2, 7, 4, 7, 6, 3, 5, 9, 2 };
+
+			auto findedIndex = search(&arr, 11);
+			Assert::AreEqual(0, findedIndex);
+
+			findedIndex = search(&arr, 4);
+			Assert::AreEqual(3, findedIndex);
+
+			findedIndex = search(&arr, 1);
+			Assert::AreEqual(-1, findedIndex);
+		}
+
 	public:
 		TEST_METHOD(LinearSearchTest_Array)
 		{
@@ -66,6 +111,7 @@ namespace Tests_Searches
 			};
 
 			testWithArray(testing);
+			testWithRandomArray(testing);
 		}
 
 
@@ -77,6 +123,7 @@ namespace Tests_Searches
 			};
 
 			testWithVector(testing);
+			testWithRandomVector(testing);
 		}
 
 
@@ -88,6 +135,7 @@ namespace Tests_Searches
 			};
 
 			testWithVectorPointer(testing);
+			testWithRandomVectorPointer(testing);
 		}
 
 
