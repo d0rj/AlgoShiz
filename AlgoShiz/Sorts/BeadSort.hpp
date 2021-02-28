@@ -38,7 +38,8 @@ namespace AlgoShiz
 
     /// <summary> Complexity - O(S), where S = sum(elements); memory - O(n^2). </summary>
     /// <remarks> Returns sorted vector high to low. Use <c>ALWAYS_LOW2HIGH</c> to fix. </remarks>
-    std::vector<int> BeadSorted(int* myints, int n)
+    template <std::size_t n>
+    std::vector<int> BeadSorted(const int (&myints)[n])
     {
         std::vector<int> list, list2, fifth(myints, myints + n);
 

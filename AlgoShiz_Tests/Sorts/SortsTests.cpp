@@ -25,8 +25,8 @@ namespace Tests_Sorts
 	{
 	private:
 		static const size_t n = 6;
-		const int* sorted = new int[6] { 1, 2, 3, 4, 5, 6 };
-		const int* unsorted = new int[6] { 3, 2, 6, 1, 5, 4 };
+		const int sorted[6] = { 1, 2, 3, 4, 5, 6 };
+		const int unsorted[6] = { 3, 2, 6, 1, 5, 4 };
 
 		int* getUnsorted()
 		{
@@ -98,10 +98,8 @@ namespace Tests_Sorts
 
 
 		TEST_METHOD(BeadSortedTest_Array)
-		{
-			auto unsorted = getUnsorted();
-			
-			compareVector(BeadSorted(unsorted, n));
+		{			
+			compareVector(BeadSorted(unsorted));
 		}
 
 
@@ -123,8 +121,9 @@ namespace Tests_Sorts
 
 		TEST_METHOD(CountingSortTest)
 		{
-			auto result = getUnsorted();
-			CountingSort(result, n);
+			int result[6];
+			std::copy(unsorted, unsorted + n, result);
+			CountingSort(result);
 			compareArray(result);
 		}
 		
