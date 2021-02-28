@@ -5,7 +5,8 @@
 
 namespace AlgoShiz
 {
-	double* MovingAverage(double* f, size_t n, size_t window)
+	template<std::size_t n>
+	double* MovingAverage(double (&f)[n], size_t window)
 	{
 		double* result = new double[n - window + 1];
         

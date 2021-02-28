@@ -14,31 +14,31 @@ namespace Tests_Math
 
 		TEST_METHOD(MovingAverageTest)
 		{
-			double* input = new double[] { 1, 2, 3, 4 };
+			double input[] = { 1, 2, 3, 4 };
 			size_t size = 4;
 
-			double* expect = new double[] { 3.0 / 2, 5.0 / 2, 7.0 / 2 };
-			double* output = MovingAverage(input, size, 2);
+			double expect[] = { 3.0 / 2, 5.0 / 2, 7.0 / 2 };
+			double* output = MovingAverage(input, 2);
 			for (size_t i = 0; i < 3; ++i)
 				Assert::AreEqual(expect[i], output[i]);
 
-			input = new double[] { 1, 2, 3, 4 };
-			expect = new double[] { 2, 3 };
-			output = MovingAverage(input, size, 3);
+			double input2[] = { 1, 2, 3, 4 };
+			double expect2[] = { 2, 3 };
+			output = MovingAverage(input2, 3);
 			for (size_t i = 0; i < 2; ++i)
-				Assert::AreEqual(expect[i], output[i]);
+				Assert::AreEqual(expect2[i], output[i]);
 
-			input = new double[] { 1, 2, 3, 4 };
-			expect = new double[] { 5.0 / 2 };
-			output = MovingAverage(input, size, 4);
+			double input3[] = { 1, 2, 3, 4 };
+			double expect3[] = { 5.0 / 2 };
+			output = MovingAverage(input3, 4);
 			for (size_t i = 0; i < 1; ++i)
-				Assert::AreEqual(expect[i], output[i]);
+				Assert::AreEqual(expect3[i], output[i]);
 
-			input = new double[] { 0, 0, 0, 0 };
-			expect = new double[] { 0, 0 };
-			output = MovingAverage(input, size, 3);
+			double input4[] = { 0, 0, 0, 0 };
+			double expect4[] = { 0, 0 };
+			output = MovingAverage(input4, 3);
 			for (size_t i = 0; i < 1; ++i)
-				Assert::AreEqual(expect[i], output[i]);
+				Assert::AreEqual(expect4[i], output[i]);
 		}
 	};
 }
