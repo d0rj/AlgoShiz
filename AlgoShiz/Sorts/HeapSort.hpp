@@ -27,9 +27,10 @@ namespace AlgoShiz
         }
     }
 
+
     /// <summary> O(n*log(n)) </summary>
-    template <typename T>
-    void HeapSort(T arr[], size_t n)
+    template <typename T, std::size_t n>
+    void HeapSort(T (&arr)[n])
     {
         for (int i = n / 2 - 1; i >= 0; --i)
             heapify(arr, n, i);

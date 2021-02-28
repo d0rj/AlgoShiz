@@ -114,8 +114,8 @@ namespace AlgoShiz
 
 
     /// <summary> O(n*log(n)) </summary>
-    template <typename T>
-    void MergeSort(T* arr, size_t n)
+    template <typename T, std::size_t n>
+    void MergeSort(T (&arr)[n])
     {
         MergeSort(arr, 0, n - 1);
     }

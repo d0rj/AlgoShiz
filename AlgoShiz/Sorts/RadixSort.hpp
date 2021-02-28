@@ -7,7 +7,8 @@
 namespace AlgoShiz
 {
 	/// <summary> O(n) </summary>
-	void RadixSort(int a[], int n)
+	template <std::size_t n>
+	void RadixSort(int (&a)[n])
 	{
 		int count[10];
 		int* output = new int[n];

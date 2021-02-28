@@ -130,8 +130,9 @@ namespace Tests_Sorts
 
 		TEST_METHOD(HeapSortTest)
 		{
-			auto result = getUnsorted();
-			HeapSort(result, n);
+			int result[6];
+			std::copy(unsorted, unsorted + n, result);
+			HeapSort(result);
 			compareArray(result);
 		}
 
@@ -154,8 +155,9 @@ namespace Tests_Sorts
 
 		TEST_METHOD(MergeSortTest_Array)
 		{
-			auto result = getUnsorted();
-			MergeSort(result, n);
+			int result[6];
+			std::copy(unsorted, unsorted + n, result);
+			MergeSort(result);
 			compareArray(result);
 		}
 
@@ -178,8 +180,9 @@ namespace Tests_Sorts
 
 		TEST_METHOD(RadixSortTest)
 		{
-			auto result = getUnsorted();
-			RadixSort(result, n);
+			int result[6];
+			std::copy(unsorted, unsorted + n, result);
+			RadixSort(result);
 			compareArray(result);
 		}
 
