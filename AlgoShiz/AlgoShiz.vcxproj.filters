@@ -138,6 +138,9 @@
     <ClInclude Include="Sorts\StrandSort.hpp">
       <Filter>Файлы заголовков\Sorts</Filter>
     </ClInclude>
+    <ClInclude Include="Sorts\GnomeSort.hpp">
+      <Filter>Файлы заголовков\Sorts</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="Math\README.html">

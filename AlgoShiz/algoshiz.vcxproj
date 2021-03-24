@@ -165,6 +165,7 @@
     <ClInclude Include="Sorts\BucketSort.hpp" />
     <ClInclude Include="Sorts\CombSort.hpp" />
     <ClInclude Include="Sorts\CountingSort.hpp" />
+    <ClInclude Include="Sorts\GnomeSort.hpp" />
     <ClInclude Include="Sorts\HeapSort.hpp" />
     <ClInclude Include="Sorts\InsertionSort.hpp" />
     <ClInclude Include="Sorts\MergeSort.hpp" />
