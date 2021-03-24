@@ -6,6 +6,7 @@
 #include "../../AlgoShiz/Sorts/BeadSort.hpp"
 #include "../../AlgoShiz/Sorts/CombSort.hpp"
 #include "../../AlgoShiz/Sorts/CountingSort.hpp"
+#include "../../AlgoShiz/Sorts/GnomeSort.hpp"
 #include "../../AlgoShiz/Sorts/HeapSort.hpp"
 #include "../../AlgoShiz/Sorts/InsertionSort.hpp"
 #include "../../AlgoShiz/Sorts/MergeSort.hpp"
@@ -126,6 +127,22 @@ namespace Tests_Sorts
 			std::copy(unsorted, unsorted + n, result);
 			CountingSort(result);
 			compareArray(result);
+		}
+
+
+		TEST_METHOD(GnomeSortTest_Vector)
+		{
+			auto result = getUnsortedVector();
+			GnomeSort(result);
+			compareVector(result);
+		}
+
+
+		TEST_METHOD(GnomeSortTest_Iterator)
+		{
+			auto result = getUnsortedVector();
+			GnomeSort(result.begin(), result.end());
+			compareVector(result);
 		}
 		
 
