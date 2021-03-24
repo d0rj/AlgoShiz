@@ -135,6 +135,9 @@
     <ClInclude Include="Structures\Vector.hpp">
       <Filter>Файлы заголовков\Structures</Filter>
     </ClInclude>
+    <ClInclude Include="Sorts\StrandSort.hpp">
+      <Filter>Файлы заголовков\Sorts</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="Math\README.html">
