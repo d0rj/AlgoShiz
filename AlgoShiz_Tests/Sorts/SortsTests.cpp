@@ -13,6 +13,7 @@
 #include "../../AlgoShiz/Sorts/RadixSort.hpp"
 #include "../../AlgoShiz/Sorts/SelectionSort.hpp"
 #include "../../AlgoShiz/Sorts/ShakerSort.hpp"
+#include "../../AlgoShiz/Sorts/StrandSort.hpp"
 
 
 using namespace Microsoft::VisualStudio::CppUnitTestFramework;
@@ -232,6 +233,22 @@ namespace Tests_Sorts
 			auto unsorted = getUnsortedVector();
 			auto result = ShakerSorted(&unsorted);
 			compareVector(*result);
+		}
+
+
+		TEST_METHOD(StrandSortTest_Vector)
+		{
+			auto result = getUnsortedVector();
+			StrandSort(result);
+			compareVector(result);
+		}
+
+
+		TEST_METHOD(StrandSortTest_Iterator)
+		{
+			auto result = getUnsortedVector();
+			StrandSort(result.begin(), result.end());
+			compareVector(result);
 		}
 	};
 }

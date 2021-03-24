@@ -85,6 +85,19 @@ void StrandSort(
 }
 
 
+/// <summary> Strand sort for vectors with any comparable elements </summary>
+/// <typeparam name="T"> A type that has an implemented operator less for its elements </typeparam>
+/// <param name="vec"> Pointer to target vector </param>
+template <typename T>
+void StrandSort(
+	std::vector<T>& vec,
+	std::function<bool(T, T)> compare = [](T a, T b) { return a < b; }
+)
+{
+	vec = strandSort(vec.begin(), vec.end(), compare);
+}
+
+
 /// <summary> Strand sort by iterators </summary>
 /// <typeparam name="Iterator"> Iterator type </typeparam>
 /// <param name="begin"> Container's start </param>
